@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    $data = [
-        'title' => 'Titolo della pagina',
-        'text' => 'Paragrafo della pagina'
-    ];
-    return view('home', $data);
+    $title = 'Titolo della pagina';
+    $text = 'Paragrafo della pagina';
+    return view('home', compact('title', 'text'));
 });
